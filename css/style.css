@@ -476,16 +476,20 @@ textarea {
   .header .container .row nav {
     display: none;
   }
-  .header .container .row nav ul .menu {
+  .header .container .row nav ul {
     flex-direction: column;
   }
-  .header .container .row nav ul .menu li:first-child a {
+  .header .container .row nav ul li:first-child a {
     padding: 0;
     color: #919191;
     background-color: #fff;
     border-radius: none;
   }
-  .header .container .row nav ul .menu li a:hover {
+  .header .container .row nav ul li:first-child a:hover {
+    color: #fff;
+  }
+  .header .container .row nav ul li a:hover {
+    background-color: #ffbf4d;
     padding: 1px 5px;
   }
 }
