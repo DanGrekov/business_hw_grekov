@@ -1,0 +1,71 @@
+.contact {
+    background-color: #709dca;
+    margin-bottom: 50px;
+
+    .container{
+        padding: 110px 15px 400px;
+
+        h1, p, img{
+            text-align: center;
+            color: #fff;
+        }
+
+        h1{
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        p{
+            font-size: 12px;
+            font-weight: 400;
+            padding: 5px 0 25px;
+        }
+
+        form{
+            position: relative;
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+
+            input{
+                border: 0;
+                width: 25%;
+                height: 40px;
+                border-radius: 3px;
+                transition: 0.5s;
+
+                &:hover {
+                    box-shadow: 0 0 15px #535353;
+                }
+
+                &::placeholder{
+                    padding-left: 20px;
+                    font-size: 13px;
+                }
+            }
+
+            button{
+                border: 0;
+                padding: 0 25px;
+                height: 40px;
+                font-size: 14px;
+                background-color: #ffbf4d;
+                color: #fff;
+                border-radius: 3px;
+                transition: 0.5s;
+
+                &:hover{
+                    box-shadow: 0 0 15px #535353;
+                }
+            }
+        }
+        img{
+            width: 650px;
+            display: block;
+            margin: 0 auto;
+            position: absolute;
+            top: 350px;
+            left: calc(50% - 325px);
+        }
+    }
+}
