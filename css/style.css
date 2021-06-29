@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -361,10 +367,11 @@ textarea {
   padding: 0.2em 0;
 }
 
-* {
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
+main .contact form button, header .header nav ul li a:hover, header .header nav ul li:first-child a {
+  color: #fff;
+  background-color: #ffbf4d;
+  border-radius: 3px;
+  transition: 0.5s;
 }
 
 .container {
@@ -376,6 +383,7 @@ textarea {
 
 .row {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -409,53 +417,45 @@ textarea {
     width: 100%;
   }
 }
-.header {
+header .header {
   padding: 15px 0;
 }
-.header .container .row {
-  justify-content: space-between;
-}
-.header .container .row img {
+header .header img {
   width: 50px;
   height: 50px;
 }
-.header .container .row label {
+header .header label {
   display: none;
 }
-.header .container .row input {
+header .header input {
   display: none;
 }
-.header .container .row nav {
+header .header nav {
   width: 65%;
   display: flex;
   align-self: center;
 }
-.header .container .row nav ul {
+header .header nav ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
   transition: 0.5s;
 }
-.header .container .row nav ul li:first-child a {
+header .header nav ul li:first-child a {
   padding: 10px 20px;
-  color: #fff;
-  background-color: #ffbf4d;
-  border-radius: 3px;
-  transition: 0.5s;
+  font-size: 12px;
 }
-.header .container .row nav ul li:first-child a:hover {
-  box-shadow: 0 0 7px #000000;
+header .header nav ul li:first-child a:hover {
+  box-shadow: 0 0 10px #423e3e;
 }
-.header .container .row nav ul li a {
+header .header nav ul li a {
   transition: 0.5s;
   font-size: 12px;
   color: #919191;
 }
-.header .container .row nav ul li a:hover {
+header .header nav ul li a:hover {
   padding: 10px 20px;
-  color: #fff;
-  background-color: #ffbf4d;
-  border-radius: 3px;
+  font-size: 12px;
 }
 
 @media (max-width: 992px) {
@@ -493,60 +493,53 @@ textarea {
     padding: 1px 5px;
   }
 }
-.contact {
+main .contact {
   background-color: #709dca;
   margin-bottom: 50px;
+  padding: 110px 0 400px;
 }
-.contact .container {
-  padding: 110px 15px 400px;
-}
-.contact .container h1, .contact .container p, .contact .container img {
+main .contact h1, main .contact p, main .contact img {
   text-align: center;
   color: #fff;
 }
-.contact .container h1 {
+main .contact h1 {
   font-size: 26px;
   font-weight: 600;
 }
-.contact .container p {
+main .contact p {
   font-size: 12px;
   font-weight: 400;
   padding: 5px 0 25px;
-}
-.contact .container form {
   position: relative;
+}
+main .contact form {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
-.contact .container form input {
+main .contact form input {
   border: 0;
-  width: 25%;
   height: 40px;
   border-radius: 3px;
   transition: 0.5s;
 }
-.contact .container form input:hover {
-  box-shadow: 0 0 15px #535353;
+main .contact form input:hover {
+  box-shadow: 0 0 10px #423e3e;
 }
-.contact .container form input::placeholder {
+main .contact form input::placeholder {
   padding-left: 20px;
   font-size: 13px;
 }
-.contact .container form button {
+main .contact form button {
   border: 0;
-  padding: 0 25px;
   height: 40px;
+  padding: 0 30px;
   font-size: 14px;
-  background-color: #ffbf4d;
-  color: #fff;
-  border-radius: 3px;
-  transition: 0.5s;
 }
-.contact .container form button:hover {
-  box-shadow: 0 0 15px #535353;
+main .contact form button:hover {
+  box-shadow: 0 0 10px #423e3e;
 }
-.contact .container img {
+main .contact img {
   width: 650px;
   display: block;
   margin: 0 auto;
@@ -556,49 +549,53 @@ textarea {
 }
 
 @media (max-width: 992px) {
-  .contact .container {
-    padding: 110px 15px 190px;
+  main .contact {
+    padding: 110px 0 220px;
   }
-  .contact .container form input {
-    max-width: 150px;
+  main .contact .container form input {
+    max-width: 180px;
   }
-  .contact .container img {
+  main .contact .container img {
     width: 400px;
     left: calc(50% - 200px);
     top: 320px;
   }
 }
 @media (max-width: 767px) {
-  .contact .container form {
+  main .contact {
+    padding: 50px 0 250px;
+  }
+  main .contact .container form {
     flex-direction: column;
     align-items: center;
   }
-  .contact .container form input {
+  main .contact .container form input {
     margin-bottom: 20px;
   }
-  .contact .container img {
+  main .contact .container img {
     width: 350px;
     left: calc(50% - 175px);
     top: 500px;
   }
 }
 @media (max-width: 500px) {
-  .contact .container {
-    padding: 110px 15px 150px;
+  main .contact {
+    padding: 50px 0 150px;
   }
-  .contact .container img {
+  main .contact .container img {
     width: 250px;
     left: calc(50% - 125px);
-    top: 550px;
+    top: 480px;
   }
 }
 @media (max-width: 320px) {
-  .contact .container img {
+  main .contact .container img {
     width: 180px;
     left: calc(50% - 90px);
   }
 }
 footer {
+  text-align: center;
   margin-top: 100px;
   width: 100%;
   height: 50px;
