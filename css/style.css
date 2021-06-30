@@ -594,6 +594,50 @@ main .contact img {
     left: calc(50% - 90px);
   }
 }
+main .services {
+  padding-top: 100px;
+}
+main .services h2 {
+  color: #394b50;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 900;
+}
+main .services p {
+  color: #394b50;
+  text-align: center;
+  padding: 5px 0 80px;
+}
+main .services .item {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+main .services .item:nth-child(even) {
+  padding: 0 0 80px 50px;
+}
+main .services .item:nth-child(odd) {
+  padding: 0 50px 80px 0;
+}
+main .services img {
+  width: 50px;
+  height: 50px;
+}
+main .services .txt {
+  padding-left: 20px;
+}
+main .services .txt h4 {
+  color: #394b50;
+  font-size: 16px;
+  font-weight: 600;
+}
+main .services .txt p {
+  color: #7b7b7b;
+  font-size: 15px;
+  text-align: justify;
+  padding: 15px 0 0;
+}
+
 footer {
   text-align: center;
   margin-top: 100px;
