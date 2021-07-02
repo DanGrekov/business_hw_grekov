@@ -10,9 +10,3 @@ $shadow: 0 0 10px rgb(66, 62, 62);
     transition: 0.5s;
 }
 
-@mixin button($butt_padding, $font-s) {
-    padding: $butt_padding;
-    font-size: $font-s;
-    
-    @extend %header_nav_item;
-}

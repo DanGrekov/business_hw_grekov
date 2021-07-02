@@ -552,10 +552,7 @@ main .contact img {
   main .contact {
     padding: 110px 0 220px;
   }
-  main .contact .container form input {
-    max-width: 180px;
-  }
-  main .contact .container img {
+  main img {
     width: 400px;
     left: calc(50% - 200px);
     top: 320px;
@@ -582,6 +579,12 @@ main .contact img {
   main .contact {
     padding: 50px 0 150px;
   }
+  main .contact .container form input {
+    width: 100%;
+  }
+  main .contact .container form button {
+    width: 100%;
+  }
   main .contact .container img {
     width: 250px;
     left: calc(50% - 125px);
@@ -595,7 +598,7 @@ main .contact img {
   }
 }
 main .services {
-  padding-top: 100px;
+  padding: 100px 0;
 }
 main .services h2 {
   color: #394b50;
@@ -619,25 +622,155 @@ main .services .item:nth-child(even) {
 main .services .item:nth-child(odd) {
   padding: 0 50px 80px 0;
 }
-main .services img {
+main .services .item:nth-child(5) {
+  padding-bottom: 0;
+}
+main .services .item:nth-child(6) {
+  padding-bottom: 0;
+}
+main .services .item img {
   width: 50px;
   height: 50px;
 }
-main .services .txt {
+main .services .item .txt {
   padding-left: 20px;
 }
-main .services .txt h4 {
+main .services .item .txt h4 {
   color: #394b50;
   font-size: 16px;
   font-weight: 600;
 }
-main .services .txt p {
+main .services .item .txt p {
   color: #7b7b7b;
   font-size: 15px;
   text-align: justify;
   padding: 15px 0 0;
+  line-height: 24px;
 }
 
+@media (max-width: 767px) {
+  main .services .item {
+    width: 100%;
+  }
+  main .services .item:nth-child(even) {
+    padding: 0 0 50px 0;
+  }
+  main .services .item:nth-child(odd) {
+    padding: 0 0 50px 0;
+  }
+  main .services .item:last-child {
+    padding-bottom: 0;
+  }
+}
+main .about_us {
+  height: 520px;
+  background-color: #ffc155;
+}
+main .about_us .container,
+main .about_us .row {
+  height: 100%;
+}
+main .about_us .left {
+  width: 50%;
+}
+main .about_us .left::after {
+  content: " ";
+}
+main .about_us .left img {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 520px;
+}
+main .about_us .right {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+main .about_us .right .inform_bar {
+  padding-left: 80px;
+  text-align: justify;
+}
+main .about_us .right .inform_bar h4 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+main .about_us .right .inform_bar p {
+  font-size: 14px;
+  line-height: 25px;
+  padding-bottom: 20px;
+}
+main .about_us .right .inform_bar a {
+  color: #fff;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 3px;
+  border-color: #e7ad48;
+  transition: 0.5s;
+}
+main .about_us .right .inform_bar a:hover {
+  background-color: #fff;
+  color: #e7ad48;
+}
+
+@media (max-width: 992px) {
+  main .about_us {
+    height: 400px;
+  }
+  main .about_us .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .about_us .left img {
+    position: static;
+    width: 100%;
+    height: 350px;
+  }
+  main .about_us .right {
+    position: static;
+  }
+}
+@media (max-width: 767px) {
+  main .about_us {
+    height: 600px;
+  }
+  main .about_us .row {
+    flex-direction: row;
+  }
+  main .about_us .row .left,
+main .about_us .row .right {
+    width: 100%;
+  }
+  main .about_us .row .left {
+    height: 30%;
+    align-items: flex-start;
+  }
+  main .about_us .row .left::before {
+    display: none;
+  }
+  main .about_us .row .left img {
+    height: 250px;
+    max-width: 350px;
+  }
+  main .about_us .row .right {
+    height: 70%;
+  }
+  main .about_us .row .right .inform_bar {
+    padding: 0;
+  }
+}
+@media (max-width: 500px) {
+  main .about_us .row .left img {
+    height: 200px;
+    max-width: 400px;
+  }
+}
 footer {
   text-align: center;
   margin-top: 100px;

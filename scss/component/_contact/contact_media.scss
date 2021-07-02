@@ -3,22 +3,17 @@
     main{
         .contact{ 
             padding: 110px 0 220px;
-            .container{
-        
-                form{
-                    input{
-                        max-width: 180px; 
-                    }
+            
                 }
-                img {
-                    width: 400px;
-                    left: calc(50% - 200px);
-                    top: 320px;
-                }
+                
+            img {
+                width: 400px;
+                left: calc(50% - 200px);
+                top: 320px;
             }
         }
     }
-}
+
 
 
 @media (max-width: 767px) {
@@ -55,7 +50,16 @@
             padding: 50px 0 150px;
 
             .container{
-                
+
+                form {
+                    input{
+                        width: 100%;
+                    }
+
+                    button{
+                        width: 100%;
+                    }
+                }
                 img {
                     width: 250px;
                     left: calc(50% - 125px);
