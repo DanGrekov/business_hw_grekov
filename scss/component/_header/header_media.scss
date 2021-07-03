@@ -3,6 +3,8 @@
     .header{
         .container{
             .row{
+                position: relative;
+
                 label{
                     display: flex;
                     align-items: center;
@@ -11,30 +13,50 @@
                     background-color: $yellow;
                     border-radius: 3px;
                 }
+
                 input{
                     display: none;
+
                     &:checked + nav{
                         display:flex;
                     }
                 }
                 nav{
+                    transform: translateX(50%);
+                    z-index: 1;
+                    border: 2px solid $yellow;
+                    border-radius: 10px;
+                    width: 50%;
+                    position: absolute;
                     display: none;
+                    top: 0;
+                    background-color: #fff;
+
                     ul{ 
+                        text-align: center;
                         flex-direction: column;
+
                         li{ 
+                            padding: 10px 0;
+
                             &:first-child a{
                                 padding: 0;
                                 color: #919191;
                                 background-color: #fff;
                                 border-radius: none;
+
                                 &:hover{
                                     color: #fff;
                                 }
                             }
-                            a{
+
+                            a{  
+                                font-size: 20px;
+                                line-height: 30px;
+
                                 &:hover{
                                 background-color: $yellow;   
-                                padding: 1px 5px; 
+                                padding: 10px; 
                                 } 
                             }
                         }
@@ -45,3 +67,16 @@
         }
     }
 }
+
+
+@media (max-width:767px){
+
+    header{
+        .container{
+            width: 100%;
+        }
+    }
+}
+
+
+

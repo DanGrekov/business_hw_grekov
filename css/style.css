@@ -367,13 +367,6 @@ textarea {
   padding: 0.2em 0;
 }
 
-main .contact form button, header .header nav ul li a:hover, header .header nav ul li:first-child a {
-  color: #fff;
-  background-color: #ffbf4d;
-  border-radius: 3px;
-  transition: 0.5s;
-}
-
 .container {
   width: 1100px;
   margin: 0 auto;
@@ -417,48 +410,58 @@ main .contact form button, header .header nav ul li a:hover, header .header nav 
     width: 100%;
   }
 }
-header .header {
+.contact form button, .header nav ul li a:hover, .header nav ul li:first-child a {
+  color: #fff;
+  background-color: #ffbf4d;
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.header {
   padding: 15px 0;
 }
-header .header img {
+.header img {
   width: 50px;
   height: 50px;
 }
-header .header label {
+.header label {
   display: none;
 }
-header .header input {
+.header input {
   display: none;
 }
-header .header nav {
+.header nav {
   width: 65%;
   display: flex;
   align-self: center;
 }
-header .header nav ul {
+.header nav ul {
   width: 100%;
   display: flex;
   justify-content: space-between;
   transition: 0.5s;
 }
-header .header nav ul li:first-child a {
+.header nav ul li:first-child a {
   padding: 10px 20px;
   font-size: 12px;
 }
-header .header nav ul li:first-child a:hover {
+.header nav ul li:first-child a:hover {
   box-shadow: 0 0 10px #423e3e;
 }
-header .header nav ul li a {
+.header nav ul li a {
   transition: 0.5s;
   font-size: 12px;
   color: #919191;
 }
-header .header nav ul li a:hover {
+.header nav ul li a:hover {
   padding: 10px 20px;
   font-size: 12px;
 }
 
 @media (max-width: 992px) {
+  .header .container .row {
+    position: relative;
+  }
   .header .container .row label {
     display: flex;
     align-items: center;
@@ -474,10 +477,22 @@ header .header nav ul li a:hover {
     display: flex;
   }
   .header .container .row nav {
+    transform: translateX(50%);
+    z-index: 1;
+    border: 2px solid #ffbf4d;
+    border-radius: 10px;
+    width: 50%;
+    position: absolute;
     display: none;
+    top: 0;
+    background-color: #fff;
   }
   .header .container .row nav ul {
+    text-align: center;
     flex-direction: column;
+  }
+  .header .container .row nav ul li {
+    padding: 10px 0;
   }
   .header .container .row nav ul li:first-child a {
     padding: 0;
@@ -488,59 +503,69 @@ header .header nav ul li a:hover {
   .header .container .row nav ul li:first-child a:hover {
     color: #fff;
   }
+  .header .container .row nav ul li a {
+    font-size: 20px;
+    line-height: 30px;
+  }
   .header .container .row nav ul li a:hover {
     background-color: #ffbf4d;
-    padding: 1px 5px;
+    padding: 10px;
   }
 }
-main .contact {
+@media (max-width: 767px) {
+  header .container {
+    width: 100%;
+  }
+}
+.contact {
   background-color: #709dca;
   margin-bottom: 50px;
   padding: 110px 0 400px;
 }
-main .contact h1, main .contact p, main .contact img {
+.contact h1, .contact p, .contact img {
   text-align: center;
   color: #fff;
 }
-main .contact h1 {
+.contact h1 {
   font-size: 26px;
   font-weight: 600;
 }
-main .contact p {
+.contact p {
   font-size: 12px;
   font-weight: 400;
   padding: 5px 0 25px;
   position: relative;
 }
-main .contact form {
+.contact form {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
-main .contact form input {
+.contact form input {
   border: 0;
   height: 40px;
   border-radius: 3px;
+  width: 25%;
   transition: 0.5s;
 }
-main .contact form input:hover {
+.contact form input:hover {
   box-shadow: 0 0 10px #423e3e;
 }
-main .contact form input::placeholder {
+.contact form input::placeholder {
   padding-left: 20px;
   font-size: 13px;
 }
-main .contact form button {
+.contact form button {
   border: 0;
   height: 40px;
   padding: 0 30px;
   font-size: 14px;
 }
-main .contact form button:hover {
+.contact form button:hover {
   box-shadow: 0 0 10px #423e3e;
 }
-main .contact img {
-  width: 650px;
+.contact img {
+  max-width: 650px;
   display: block;
   margin: 0 auto;
   position: absolute;
@@ -549,98 +574,96 @@ main .contact img {
 }
 
 @media (max-width: 992px) {
-  main .contact {
+  .contact {
     padding: 110px 0 220px;
   }
-  main img {
-    width: 400px;
+  .contact img {
+    max-width: 400px;
     left: calc(50% - 200px);
     top: 320px;
   }
 }
 @media (max-width: 767px) {
-  main .contact {
+  .contact {
     padding: 50px 0 250px;
   }
-  main .contact .container form {
+  .contact form {
     flex-direction: column;
     align-items: center;
   }
-  main .contact .container form input {
+  .contact form input {
+    width: 100%;
     margin-bottom: 20px;
   }
-  main .contact .container img {
+  .contact form button {
+    width: 100%;
+  }
+  .contact img {
     width: 350px;
     left: calc(50% - 175px);
     top: 500px;
   }
 }
 @media (max-width: 500px) {
-  main .contact {
+  .contact {
     padding: 50px 0 150px;
   }
-  main .contact .container form input {
-    width: 100%;
-  }
-  main .contact .container form button {
-    width: 100%;
-  }
-  main .contact .container img {
+  .contact img {
     width: 250px;
     left: calc(50% - 125px);
     top: 480px;
   }
 }
 @media (max-width: 320px) {
-  main .contact .container img {
+  .contact img {
     width: 180px;
     left: calc(50% - 90px);
   }
 }
-main .services {
+.services {
   padding: 100px 0;
 }
-main .services h2 {
+.services h2 {
   color: #394b50;
   text-align: center;
   font-size: 28px;
   font-weight: 900;
 }
-main .services p {
+.services p {
   color: #394b50;
   text-align: center;
   padding: 5px 0 80px;
 }
-main .services .item {
+.services .item {
   display: flex;
   justify-content: space-between;
   width: 50%;
 }
-main .services .item:nth-child(even) {
+.services .item:nth-child(even) {
   padding: 0 0 80px 50px;
 }
-main .services .item:nth-child(odd) {
+.services .item:nth-child(odd) {
   padding: 0 50px 80px 0;
 }
-main .services .item:nth-child(5) {
+.services .item:nth-child(5) {
   padding-bottom: 0;
 }
-main .services .item:nth-child(6) {
+.services .item:nth-child(6) {
   padding-bottom: 0;
 }
-main .services .item img {
+.services .item img {
   width: 50px;
   height: 50px;
 }
-main .services .item .txt {
+.services .item .txt {
   padding-left: 20px;
 }
-main .services .item .txt h4 {
+.services .item .txt h4 {
   color: #394b50;
   font-size: 16px;
   font-weight: 600;
 }
-main .services .item .txt p {
+.services .item .txt p {
   color: #7b7b7b;
   font-size: 15px;
   text-align: justify;
@@ -649,63 +672,59 @@ main .services .item .txt p {
 }
 
 @media (max-width: 767px) {
-  main .services .item {
+  .services .item {
     width: 100%;
   }
-  main .services .item:nth-child(even) {
+  .services .item:nth-child(even) {
     padding: 0 0 50px 0;
   }
-  main .services .item:nth-child(odd) {
+  .services .item:nth-child(odd) {
     padding: 0 0 50px 0;
   }
-  main .services .item:last-child {
+  .services .item:last-child {
     padding-bottom: 0;
   }
 }
-main .about_us {
-  height: 520px;
-  background-color: #ffc155;
-}
-main .about_us .container,
-main .about_us .row {
-  height: 100%;
-}
-main .about_us .left {
-  width: 50%;
-}
-main .about_us .left::after {
-  content: " ";
-}
-main .about_us .left img {
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 520px;
-}
-main .about_us .right {
-  width: 50%;
-  height: 100%;
+.about_us {
+  background-color: #ffbf4d;
   position: relative;
+}
+.about_us::before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(../img/about_us.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about_us .right {
+  padding: 100px 0;
+  width: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
 }
-main .about_us .right .inform_bar {
+.about_us .right .inform_bar {
   padding-left: 80px;
   text-align: justify;
 }
-main .about_us .right .inform_bar h4 {
+.about_us .right .inform_bar h4 {
   font-size: 20px;
   padding-bottom: 20px;
   font-weight: 700;
 }
-main .about_us .right .inform_bar p {
+.about_us .right .inform_bar p {
   font-size: 14px;
   line-height: 25px;
   padding-bottom: 20px;
 }
-main .about_us .right .inform_bar a {
+.about_us .right .inform_bar a {
   color: #fff;
   padding: 10px;
   border: 1px solid;
@@ -713,62 +732,20 @@ main .about_us .right .inform_bar a {
   border-color: #e7ad48;
   transition: 0.5s;
 }
-main .about_us .right .inform_bar a:hover {
+.about_us .right .inform_bar a:hover {
   background-color: #fff;
   color: #e7ad48;
 }
 
-@media (max-width: 992px) {
-  main .about_us {
-    height: 400px;
-  }
-  main .about_us .left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main .about_us .left img {
-    position: static;
-    width: 100%;
-    height: 350px;
-  }
-  main .about_us .right {
-    position: static;
-  }
-}
 @media (max-width: 767px) {
-  main .about_us {
-    height: 600px;
-  }
-  main .about_us .row {
-    flex-direction: row;
-  }
-  main .about_us .row .left,
-main .about_us .row .right {
-    width: 100%;
-  }
-  main .about_us .row .left {
-    height: 30%;
-    align-items: flex-start;
-  }
-  main .about_us .row .left::before {
+  .about_us::before {
     display: none;
   }
-  main .about_us .row .left img {
-    height: 250px;
-    max-width: 350px;
+  .about_us .right {
+    width: 100%;
   }
-  main .about_us .row .right {
-    height: 70%;
-  }
-  main .about_us .row .right .inform_bar {
+  .about_us .right .inform_bar {
     padding: 0;
-  }
-}
-@media (max-width: 500px) {
-  main .about_us .row .left img {
-    height: 200px;
-    max-width: 400px;
   }
 }
 footer {
